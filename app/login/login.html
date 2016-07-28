@@ -1,25 +1,30 @@
- <div ng-controller="loginController" class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
+ <div ng-controller="loginController" class="row">
+<div class="col-sm-2 col-md-2 col-lg-2 sidenav column">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
     </div>
-    <div class="col-sm-8 text-left">
-      <h1>Welcome</h1>
-       <p>{{message}}</p>
-	   
-      <hr>
+    <div class="col-sm-8 col-md-8 col-lg-8 column">
 
-	  <div ng-repeat="details in patientdata">
-      <p><span>{{details.firstname}} </span>
-	  &nbsp;&nbsp;<span>{{details.age}}</span>&nbsp;&nbsp; {{details.imgUrl}}
-	 
-	  <span><img  src={{details.imgUrl}} alt='{{details.profileID}}'/></span>
-	  </p>
-	  </div>
-      <p>Lorem ipsum...</p>
+       <p class="underline">{{newsFeed}}</p>
+	<div class="well col-xs-12 column" ng-repeat="details in patientdata">
+	  <div class="text-left col-xs-4">
+		  {{details.firstname}} 
+		</div>
+	  <div class="text-center col-xs-4">
+		  {{details.age}}
+		  </div>
+	  <div class="text-right col-xs-4 ">
+		  <img ng-src={{details.imgUrl}} alt='{{details.profileID}}'/>	
+		  
+		  </div>
+	</div>
     </div>
-    <div class="col-sm-2 sidenav">
+
+    <div class="col-sm-2 col-md-2 col-lg-2 sidenav column">
       <div class="well">
         <p>ADS</p>
       </div>
